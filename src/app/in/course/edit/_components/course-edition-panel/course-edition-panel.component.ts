@@ -302,7 +302,7 @@ export class CourseEditionPanelComponent implements OnInit {
     private async getLessonsRessources(): Promise<void> {
         try {
             for (const module of this.modules) {
-                await this.api.collect(
+                this.modules = await this.api.collect(
                     'learn\\Chapter',
                     ['module_id', '=', module.id],
                     ['id', 'title', 'order'],
