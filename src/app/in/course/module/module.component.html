@@ -5,8 +5,8 @@
             <a *ngIf="hasCourseAccess" mat-raised-button [color]="'accent'" [href]="courseTitle">Poursuivre le cours</a>
         </ng-container>
     </app-top-bar>
-    <div class="container">
-        <div class="details" *ngIf="module">
+    <div class="container" *ngIf="module">
+        <div class="details">
             <div class="left">
                 <eq-string
                     [title]="'Module title'"

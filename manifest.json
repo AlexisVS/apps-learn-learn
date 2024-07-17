@@ -1,9 +1,9 @@
 {
-    "name": "learn",
+    "name": "learn app",
     "description": "",
     "url": "/learn",
-    "icon": "",
-    "color": "#ff0000",
+    "icon": "school",
+    "color": "#39C63F",
     "access": {
         "groups": [
             "admins",

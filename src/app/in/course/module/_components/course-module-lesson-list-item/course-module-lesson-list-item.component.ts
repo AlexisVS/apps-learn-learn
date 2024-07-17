@@ -40,7 +40,7 @@ export class CourseModuleLessonListItemComponent implements OnInit {
     private async getLessons(): Promise<void> {
         const moduleId: number = this.route.snapshot.params?.id;
         try {
-            await this.api.collect(
+            this.lessons = await this.api.collect(
                 'learn\\Chapter',
                 [['module_id', '=', moduleId]],
                 ['title', 'subtitle', 'description', 'order'],

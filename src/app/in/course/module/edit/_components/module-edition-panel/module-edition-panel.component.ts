@@ -28,7 +28,7 @@ export class ModuleEditionPanelComponent implements OnInit {
         const urlSegments: string[] = this.router.url.split('/');
         const moduleId: number = +urlSegments[urlSegments.length - 2];
         try {
-            await this.api.collect(
+            this.lessons = await this.api.collect(
                 'learn\\Chapter',
                 [['module_id', '=', moduleId]],
                 ['title', 'subtitle', 'description', 'order'],
